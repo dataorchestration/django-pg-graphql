@@ -24,7 +24,8 @@ git init
 git remote add origin <your_project_git_url>
 git add .
 git commit -m <message>
-git push -u origin master
+git branch -M main
+git push -u origin main
 
 ./scripts/start-container # starts a local terminal for local development
 ./scripts/migrate
