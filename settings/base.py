@@ -39,6 +39,9 @@ INSTALLED_APPS = [
   'graphene_django',
   'import_export',
   'simple_history',
+  'corsheaders',
+  'health_check',
+  'health_check.db',
 ]
 
 GRAPHENE = {

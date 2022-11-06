@@ -18,6 +18,7 @@ django-import-export = "*"
 pipfile = "*"
 Werkzeug = "*"
 django-cors-headers = "*"
+django-health-check = "*"
 
 [requires]
 python_version = "3.8"
