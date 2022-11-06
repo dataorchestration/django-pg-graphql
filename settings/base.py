@@ -59,6 +59,31 @@ GRAPHQL_JWT = {
   'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
 }
 
+LOGGING = {
+  'version': 1,
+  'disable_existing_loggers': False,
+  'handlers': {
+    'console': {
+      'class': 'logging.StreamHandler',
+    },
+  },
+  'root': {
+    'handlers': ['console'],
+    'level': 'WARNING',
+  },
+  'loggers': {
+    'django': {
+      'handlers': ['console'],
+      'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+      'propagate': False,
+    },
+    'django.db.backends': {
+      'level': os.getenv('DJANGO_DB_LOG_LEVEL', 'ERROR'),
+      'handlers': ['console'],
+    },
+  },
+}
+
 MIDDLEWARE = [
   'django.middleware.gzip.GZipMiddleware',
   'django.middleware.security.SecurityMiddleware',
