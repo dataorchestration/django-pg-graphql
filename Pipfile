@@ -17,6 +17,7 @@ django-simple-history = "*"
 django-import-export = "*"
 pipfile = "*"
 Werkzeug = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
